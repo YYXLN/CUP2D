@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{FEE2E3BD-6612-4CC2-90BC-AB6599166DAD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cubism\src\ArgumentParser.cpp" />
+    <ClCompile Include="cubism\src\Histogram.cpp" />
+    <ClCompile Include="cubism\tests\argparser\testArgumentParser.cpp" />
+    <ClCompile Include="cubism\tests\spacefillingcurve\testSpaceFillingCurve.cpp" />
+    <ClCompile Include="source\bindings\Bindings.cpp" />
+    <ClCompile Include="source\bindings\Fields.cpp" />
+    <ClCompile Include="source\bindings\Operators.cpp" />
+    <ClCompile Include="source\bindings\Poisson.cpp" />
+    <ClCompile Include="source\bindings\Shapes.cpp" />
+    <ClCompile Include="source\bindings\Simulation.cpp" />
+    <ClCompile Include="source\debugRL.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\obstacles\CarlingFish.cpp" />
+    <ClCompile Include="source\obstacles\CStartFish.cpp" />
+    <ClCompile Include="source\obstacles\ExperimentFish.cpp" />
+    <ClCompile Include="source\obstacles\Fish.cpp" />
+    <ClCompile Include="source\obstacles\FishData.cpp" />
+    <ClCompile Include="source\obstacles\Naca.cpp" />
+    <ClCompile Include="source\obstacles\NeuroKinematicFish.cpp" />
+    <ClCompile Include="source\obstacles\ShapeLibrary.cpp" />
+    <ClCompile Include="source\obstacles\ShapesSimple.cpp" />
+    <ClCompile Include="source\obstacles\SmartCylinder.cpp" />
+    <ClCompile Include="source\obstacles\StefanFish.cpp" />
+    <ClCompile Include="source\obstacles\Teardrop.cpp" />
+    <ClCompile Include="source\obstacles\Waterturbine.cpp" />
+    <ClCompile Include="source\obstacles\Windmill.cpp" />
+    <ClCompile Include="source\obstacles\ZebraFish.cpp" />
+    <ClCompile Include="source\operators\AdaptTheMesh.cpp" />
+    <ClCompile Include="source\operators\advDiff.cpp" />
+    <ClCompile Include="source\operators\advDiffSGS.cpp" />
+    <ClCompile Include="source\operators\ComputeForces.cpp" />
+    <ClCompile Include="source\operators\Forcing.cpp" />
+    <ClCompile Include="source\operators\Helpers.cpp" />
+    <ClCompile Include="source\operators\ImportExportUniform.cpp" />
+    <ClCompile Include="source\operators\PressureSingle.cpp" />
+    <ClCompile Include="source\operators\PutObjectsOnGrid.cpp" />
+    <ClCompile Include="source\poisson\AMRSolver.cpp" />
+    <ClCompile Include="source\poisson\Base.cpp" />
+    <ClCompile Include="source\poisson\ExpAMRSolver.cpp" />
+    <ClCompile Include="source\poisson\LocalSpMatDnVec.cpp" />
+    <ClCompile Include="source\Shape.cpp" />
+    <ClCompile Include="source\Simulation.cpp" />
+    <ClCompile Include="source\SimulationData.cpp" />
+    <ClCompile Include="source\utils\BufferedLogger.cpp" />
+    <ClCompile Include="source\utils\StackTrace.cpp" />
+    <ClCompile Include="tools\grid_compression\main.cpp" />
+    <ClCompile Include="tools\uniform_conversion\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cubism\include\cubism\AMR_MeshAdaptation.h" />
+    <ClInclude Include="cubism\include\cubism\AMR_MeshAdaptationMPI.h" />
+    <ClInclude Include="cubism\include\cubism\AMR_SynchronizerMPI.h" />
+    <ClInclude Include="cubism\include\cubism\ArgumentParser.h" />
+    <ClInclude Include="cubism\include\cubism\BlockInfo.h" />
+    <ClInclude Include="cubism\include\cubism\BlockLab.h" />
+    <ClInclude Include="cubism\include\cubism\BlockLabMPI.h" />
+    <ClInclude Include="cubism\include\cubism\Definitions.h" />
+    <ClInclude Include="cubism\include\cubism\FluxCorrection.h" />
+    <ClInclude Include="cubism\include\cubism\FluxCorrectionMPI.h" />
+    <ClInclude Include="cubism\include\cubism\Grid.h" />
+    <ClInclude Include="cubism\include\cubism\GridMPI.h" />
+    <ClInclude Include="cubism\include\cubism\GrowingVector.h" />
+    <ClInclude Include="cubism\include\cubism\HDF5Dumper.h" />
+    <ClInclude Include="cubism\include\cubism\HDF5Dumper_MPI.h" />
+    <ClInclude Include="cubism\include\cubism\ImportExport.h" />
+    <ClInclude Include="cubism\include\cubism\ImportExport.hh" />
+    <ClInclude Include="cubism\include\cubism\LoadBalancer.h" />
+    <ClInclude Include="cubism\include\cubism\Matrix3D.h" />
+    <ClInclude Include="cubism\include\cubism\Profiler.h" />
+    <ClInclude Include="cubism\include\cubism\PUPkernelsMPI.h" />
+    <ClInclude Include="cubism\include\cubism\SpaceFillingCurve.h" />
+    <ClInclude Include="cubism\include\cubism\SpaceFillingCurve2D.h" />
+    <ClInclude Include="cubism\include\cubism\StencilInfo.h" />
+    <ClInclude Include="cubism\tests\common.h" />
+    <ClInclude Include="source\bindings\Common.h" />
+    <ClInclude Include="source\bindings\Fields.h" />
+    <ClInclude Include="source\Definitions.h" />
+    <ClInclude Include="source\include\helper_cuda.h" />
+    <ClInclude Include="source\ObstacleBlock.h" />
+    <ClInclude Include="source\obstacles\CarlingFish.h" />
+    <ClInclude Include="source\obstacles\CStartFish.h" />
+    <ClInclude Include="source\obstacles\ExperimentFish.h" />
+    <ClInclude Include="source\obstacles\Fish.h" />
+    <ClInclude Include="source\obstacles\FishData.h" />
+    <ClInclude Include="source\obstacles\FishUtilities.h" />
+    <ClInclude Include="source\obstacles\Naca.h" />
+    <ClInclude Include="source\obstacles\NeuroKinematicFish.h" />
+    <ClInclude Include="source\obstacles\ShapeLibrary.h" />
+    <ClInclude Include="source\obstacles\ShapesSimple.h" />
+    <ClInclude Include="source\obstacles\SmartCylinder.h" />
+    <ClInclude Include="source\obstacles\StefanFish.h" />
+    <ClInclude Include="source\obstacles\Teardrop.h" />
+    <ClInclude Include="source\obstacles\Waterturbine.h" />
+    <ClInclude Include="source\obstacles\Windmill.h" />
+    <ClInclude Include="source\obstacles\ZebraFish.h" />
+    <ClInclude Include="source\Operator.h" />
+    <ClInclude Include="source\operators\AdaptTheMesh.h" />
+    <ClInclude Include="source\operators\advDiff.h" />
+    <ClInclude Include="source\operators\advDiffSGS.h" />
+    <ClInclude Include="source\operators\ComputeForces.h" />
+    <ClInclude Include="source\operators\Forcing.h" />
+    <ClInclude Include="source\operators\Helpers.h" />
+    <ClInclude Include="source\operators\ImportExportUniform.h" />
+    <ClInclude Include="source\operators\PressureSingle.h" />
+    <ClInclude Include="source\operators\PutObjectsOnGrid.h" />
+    <ClInclude Include="source\poisson\AMRSolver.h" />
+    <ClInclude Include="source\poisson\Base.h" />
+    <ClInclude Include="source\poisson\ExpAMRSolver.h" />
+    <ClInclude Include="source\poisson\LocalSpMatDnVec.h" />
+    <ClInclude Include="source\Shape.h" />
+    <ClInclude Include="source\Simulation.h" />
+    <ClInclude Include="source\SimulationData.h" />
+    <ClInclude Include="source\utils\BufferedLogger.h" />
+    <ClInclude Include="source\utils\FactoryFileLineParser.h" />
+    <ClInclude Include="source\utils\IterativeLogger.h" />
+    <ClInclude Include="source\utils\StackTrace.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
